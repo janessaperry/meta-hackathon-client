@@ -4,7 +4,7 @@ function FeatureBlock({ iconPath, iconAltText, featureText }) {
     return (
         <div className="feature-block">
             <img
-                className="feaure-block__icon"
+                className="feature-block__icon"
                 src={iconPath}
                 alt={iconAltText}
             />

@@ -36,7 +36,7 @@ function MenuModal({ isOpen, handleCloseModal }) {
         >
             <div className="modal__content-wrapper">
                 <hr className="modal__bar modal__bar--top" />
-                <div className="modal__features">
+                <div className="modal__features-top">
                     <FeatureBlock
                         iconPath={bookmarkIcon}
                         iconAltText="bookmark border icon"
@@ -51,7 +51,7 @@ function MenuModal({ isOpen, handleCloseModal }) {
                 <button className="modal__visual-search-btn">
                     Visual Search
                 </button>
-                <section className="modal__function-list">
+                <section className="modal__features-list">
                     <FeatureInline
                         iconPath={userIcon}
                         iconAltText="account border icon"

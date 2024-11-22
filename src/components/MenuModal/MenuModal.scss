@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables" as *;
+
 .ReactModal {
     &__Content--after-open {
         outline: none;
@@ -13,5 +15,9 @@
     border-radius: 1.25rem 1.25rem 0 0;
     &__content-wrapper {
         height: 100%;
+    }
+    &__features-top {
+        padding: 0.5rem;
+        @include flex-row($gap: $spacing-8);
     }
 }
