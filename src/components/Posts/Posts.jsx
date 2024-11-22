@@ -4,8 +4,18 @@ import like from "../../assets/images/icons/like-active.png";
 import comment from "../../assets/images/icons/comment.png";
 import save from "../../assets/images/icons/save.svg";
 import share from "../../assets/images/icons/share.png";
+import MenuModal from "../MenuModal/MenuModal";
+import { useState } from "react";
 
 export default function Posts({ postImage }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleMoreIconClick = () => {
+    setIsOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="post">
       {/* Post header */}
@@ -16,7 +26,7 @@ export default function Posts({ postImage }) {
           </div>
           <p className="post__profile-name">ruffles</p>
         </div>
-        <button className="post__dots">
+        <button className="post__dots" onClick={() => handleMoreIconClick()}>
           <span className="material-icons">more_horiz</span>
         </button>
       </div>
@@ -54,6 +64,7 @@ export default function Posts({ postImage }) {
         <p className="post__view-all">View all comments</p>
         <p className="post__timestamp">3 days ago</p>
       </div>
+      <MenuModal isOpen={isOpen} handleCloseModal={handleCloseModal} />
     </div>
   );
 }
