@@ -1,0 +1,74 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+	padding: $spacing-16 $spacing-8;
+	@include flex-row($spacing-16);
+	align-items: center;
+
+	&__query-image {
+		border-radius: 4px;
+		width: 44px;
+		height: 44px;
+		aspect-ratio: 1/1;
+		object-fit: contain;
+	}
+}
+
+.tabs {
+	&__list {
+		list-style: none;
+		@include flex-row;
+	}
+
+	&__item {
+		cursor: pointer;
+		color: #6e757f;
+		font-size: 12px;
+		padding: $spacing-8 $spacing-16;
+		font-weight: 500;
+
+		&.active {
+			color: #0d1015;
+			border-bottom: 2px solid #0d1015;
+		}
+	}
+}
+
+.posts {
+	line-height: 0;
+
+	&__list {
+		@include flex-row(2px);
+		flex-wrap: wrap;
+	}
+
+	&__image-item {
+		flex-basis: 33%;
+		line-height: 0;
+	}
+
+	&__image {
+		width: 100%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+	}
+}
+
+.profile {
+	@include flex-col;
+
+	&__title {
+		padding: $spacing-12;
+		font-size: 14px;
+		font-weight: 500;
+		@include flex-row($spacing-12);
+		align-items: center;
+	}
+
+	&__image {
+		max-width: 36px;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		border-radius: 100px;
+	}
+}
