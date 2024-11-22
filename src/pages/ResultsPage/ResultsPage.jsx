@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../../components/Footer/Footer";
-import postImage1 from "../../assets/images/home-image-1.webp";
 import postImage2 from "../../assets/images/home-image-2.webp";
 import "./ResultsPage.scss";
 
@@ -45,7 +44,7 @@ function ResultsPage() {
 				<div className="top-nav__query-wrapper">
 					<img
 						className="top-nav__query-image"
-						src={postImage1}
+						src={postImage2}
 						alt="Thumbnail of visual search query"
 					/>
 				</div>
