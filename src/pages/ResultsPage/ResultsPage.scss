@@ -84,3 +84,15 @@
 		border-radius: 100px;
 	}
 }
+
+.suggestions {
+	padding: $spacing-8 $spacing-12;
+	@include flex-row($spacing-8);
+
+	&__chip {
+		font-size: 14px;
+		background-color: #eff0f2;
+		padding: $spacing-8;
+		border-radius: 4px;
+	}
+}

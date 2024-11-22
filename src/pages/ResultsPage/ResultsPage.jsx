@@ -88,31 +88,42 @@ function ResultsPage() {
 					</div>
 				)}
 
-				{activeTab === "profiles" &&
-					results.map((profile, index) => {
-						return (
-							<div key={index} className="profile">
-								<div className="profile__title">
-									<img className="profile__image" src={profile.profilePhoto} />
-									<p className="profile__name">{profile.profileName}</p>
-								</div>
+				{activeTab === "profiles" && (
+					<>
+						<div className="suggestions">
+							<div className="suggestions__chip">restaurants</div>
+							<div className="suggestions__chip">recipes</div>
+							<div className="suggestions__chip">pasta</div>
+						</div>
+						{results.map((profile, index) => {
+							return (
+								<div key={index} className="profile">
+									<div className="profile__title">
+										<img
+											className="profile__image"
+											src={profile.profilePhoto}
+										/>
+										<p className="profile__name">{profile.profileName}</p>
+									</div>
 
-								<div className="posts__list">
-									{profile.profilePosts?.map((url, index) => {
-										return (
-											<div key={index} className="posts__image-item">
-												<img
-													className="posts__image"
-													src={url}
-													alt="Instagram post"
-												/>
-											</div>
-										);
-									})}
+									<div className="posts__list">
+										{profile.profilePosts?.map((url, index) => {
+											return (
+												<div key={index} className="posts__image-item">
+													<img
+														className="posts__image"
+														src={url}
+														alt="Instagram post"
+													/>
+												</div>
+											);
+										})}
+									</div>
 								</div>
-							</div>
-						);
-					})}
+							);
+						})}
+					</>
+				)}
 			</div>
 			<Footer />
 		</main>
