@@ -3,8 +3,8 @@ import './App.scss'
 import HomePage from './pages/HomePage/HomePage'
 import ResultsPage from "./pages/ResultsPage/ResultsPage";
 
-function App() {
 
+function App() {
   return (
     <>
       <BrowserRouter>
@@ -18,8 +18,9 @@ function App() {
         </Routes>
       </main>
     </BrowserRouter>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;
