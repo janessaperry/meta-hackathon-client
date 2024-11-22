@@ -86,6 +86,7 @@
 }
 
 .suggestions {
+	cursor: pointer;
 	padding: $spacing-8 $spacing-12;
 	@include flex-row($spacing-8);
 
