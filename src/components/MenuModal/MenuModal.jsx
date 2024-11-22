@@ -59,7 +59,7 @@ function MenuModal({ isOpen, handleCloseModal, postImage }) {
                         src={postImage}
                         alt="post image"
                     />
-                    Visual Search
+                    Iggy Discover
                 </button>
                 <section className="modal__features-list">
                     <FeatureInline
