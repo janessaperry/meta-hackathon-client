@@ -13,7 +13,7 @@ import notInterestedIcon from "../../assets/icons/not-interested-icon.svg";
 import captionIcon from "../../assets/icons/caption-icon.svg";
 import infoIcon from "../../assets/icons/info-outline-icon.svg";
 
-function MenuModal({ isOpen, handleCloseModal }) {
+function MenuModal({ isOpen, handleCloseModal, postImage }) {
     return (
         <ReactModal
             className="modal"
@@ -49,6 +49,11 @@ function MenuModal({ isOpen, handleCloseModal }) {
                     />
                 </div>
                 <button className="modal__visual-search-btn">
+                    <img
+                        className="modal__btn-image"
+                        src={postImage}
+                        alt="post image"
+                    />
                     Visual Search
                 </button>
                 <section className="modal__features-list">

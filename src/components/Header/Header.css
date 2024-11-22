@@ -1,0 +1,25 @@
+.header {
+  padding: 0.75rem 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-image {
+  display: block;
+  width: 6.5rem;
+  height: 1.875rem;
+}
+
+.icons-list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}/*# sourceMappingURL=Header.css.map */
