@@ -12,8 +12,10 @@ import translateIcon from "../../assets/icons/translate-icon.svg";
 import notInterestedIcon from "../../assets/icons/not-interested-icon.svg";
 import captionIcon from "../../assets/icons/caption-icon.svg";
 import infoIcon from "../../assets/icons/info-outline-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 function MenuModal({ isOpen, handleCloseModal, postImage }) {
+    const navigate = useNavigate();
     return (
         <ReactModal
             className="modal"
@@ -48,7 +50,10 @@ function MenuModal({ isOpen, handleCloseModal, postImage }) {
                         featureText="Remix"
                     />
                 </div>
-                <button className="modal__visual-search-btn">
+                <button
+                    className="modal__visual-search-btn"
+                    onClick={() => navigate("/result")}
+                >
                     <img
                         className="modal__btn-image"
                         src={postImage}
