@@ -1,0 +1,25 @@
+
+.avatar{
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+}
+.stories{
+   
+ 
+    &__list{
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+        padding: 0.5rem .5rem;
+        scrollbar-width: none;
+    
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: .75rem;
+    }
+}
