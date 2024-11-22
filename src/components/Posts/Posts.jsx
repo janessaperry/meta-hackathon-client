@@ -9,11 +9,14 @@ import { useState } from "react";
 
 export default function Posts({ postImage }) {
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
     const handleMoreIconClick = () => {
+        setSelectedImage(postImage);
         setIsOpen(true);
     };
     const handleCloseModal = () => {
         setIsOpen(false);
+        setSelectedImage(null);
     };
 
     return (
@@ -83,7 +86,7 @@ export default function Posts({ postImage }) {
             <MenuModal
                 isOpen={isOpen}
                 handleCloseModal={handleCloseModal}
-                postImage={postImage}
+                postImage={selectedImage}
             />
         </div>
     );
