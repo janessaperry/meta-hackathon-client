@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import Footer from "../../components/Footer/Footer";
 import "./ResultsPage.scss";
 
 function ResultsPage() {
 	const baseApiUrl = import.meta.env.VITE_API_URL;
-	const { postId } = useParams();
+	const { searchQuery } = useParams();
 	const [results, setResults] = useState([]);
 	const [activeTab, setActiveTab] = useState("posts");
+	const navigate = useNavigate();
 
 	const getImages = async (type) => {
 		try {
-			const response = await axios.get(`${baseApiUrl}/${type}/${postId}`);
+			const response = await axios.get(`${baseApiUrl}/${type}/${searchQuery}`);
 
 			if (type === "posts") {
 				const images = response.data.pageData.images;
@@ -21,7 +23,6 @@ function ResultsPage() {
 			if (type === "profiles") {
 				const profiles = response.data.pageData.profiles;
 				setResults(profiles);
-				console.log(profiles);
 			}
 		} catch (error) {
 			console.error(`Error fetching ${type} data:`, error);
@@ -30,18 +31,18 @@ function ResultsPage() {
 
 	useEffect(() => {
 		getImages(activeTab);
-	}, [postId, activeTab]);
+	}, [searchQuery, activeTab]);
 
 	return (
 		<main>
-			<div className="header">
-				<div className="header__back-icon">
+			<div className="top-nav">
+				<div className="top-nav__back-icon" onClick={() => navigate("/")}>
 					<span className="material-icons">chevron_left</span>
 				</div>
 
-				<div className="header__query-wrapper">
+				<div className="top-nav__query-wrapper">
 					<img
-						className="header__query-image"
+						className="top-nav__query-image"
 						src="https://placecats.com/44/44"
 						alt="Thumbnail of visual search query"
 					/>
@@ -113,6 +114,7 @@ function ResultsPage() {
 						);
 					})}
 			</div>
+			<Footer />
 		</main>
 	);
 }
