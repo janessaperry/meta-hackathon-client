@@ -1,5 +1,17 @@
 import ReactModal from "react-modal";
 import "./MenuModal.scss";
+import FeatureBlock from "../FeatureBlock/FeatureBlock";
+import FeatureInline from "../FeatureInline/FeatureInline";
+import bookmarkIcon from "../../assets/icons/bookmark_border.svg";
+import remixIcon from "../../assets/icons/remix-icon.svg";
+import userIcon from "../../assets/icons/user-icon.svg";
+import qrCodeIcon from "../../assets/icons/qr-code-icon.svg";
+import slidersIcon from "../../assets/icons/sliders-icon.svg";
+import reportIcon from "../../assets/icons/report-icon.svg";
+import translateIcon from "../../assets/icons/translate-icon.svg";
+import notInterestedIcon from "../../assets/icons/not-interested-icon.svg";
+import captionIcon from "../../assets/icons/caption-icon.svg";
+import infoIcon from "../../assets/icons/info-outline-icon.svg";
 
 function MenuModal({ isOpen, handleCloseModal }) {
     return (
@@ -25,33 +37,62 @@ function MenuModal({ isOpen, handleCloseModal }) {
             <div className="modal__content-wrapper">
                 <hr className="modal__bar modal__bar--top" />
                 <div className="modal__features">
-                    <article className="feature__save-wrapper">
-                        <span class="material-icons">bookmark_border</span>
-                        <span className="feature__text feature__text--top">
-                            Save
-                        </span>
-                    </article>
-
-                    <article className="feature__remix-wrapper">
-                        <span className="material-icons"></span>
-                        <span className="feature__text feature__text--top">
-                            Remix
-                        </span>
-                    </article>
+                    <FeatureBlock
+                        iconPath={bookmarkIcon}
+                        iconAltText="bookmark border icon"
+                        featureText="Save"
+                    />
+                    <FeatureBlock
+                        iconPath={remixIcon}
+                        iconAltText="remix icon"
+                        featureText="Remix"
+                    />
                 </div>
                 <button className="modal__visual-search-btn">
                     Visual Search
                 </button>
                 <section className="modal__function-list">
-                    <div className="modal__function-item"></div>
-                    <div className="modal__function-item"></div>
-                    <div className="modal__function-item"></div>
-                    <div className="modal__function-item"></div>
-                    <div className="modal__function-item"></div>
-                    <div className="modal__function-item"></div>
-                    <div className="modal__function-item"></div>
+                    <FeatureInline
+                        iconPath={userIcon}
+                        iconAltText="account border icon"
+                        featureText="About this account"
+                    />
+                    <FeatureInline
+                        iconPath={translateIcon}
+                        iconAltText="translate icon"
+                        featureText="Translations"
+                    />
+                    <FeatureInline
+                        iconPath={captionIcon}
+                        iconAltText="closed captions icon"
+                        featureText="Closed captions"
+                    />
+                    <FeatureInline
+                        iconPath={qrCodeIcon}
+                        iconAltText="qr code icon"
+                        featureText="QR code"
+                    />
+                    <FeatureInline
+                        iconPath={infoIcon}
+                        iconAltText="account border icon"
+                        featureText="Why you're seeing this post"
+                    />
+                    <FeatureInline
+                        iconPath={notInterestedIcon}
+                        iconAltText="account border icon"
+                        featureText="Not interested"
+                    />
+                    <FeatureInline
+                        iconPath={reportIcon}
+                        iconAltText="exclamation mark message bubble icon"
+                        featureText="Report"
+                    />
                 </section>
-                <article className="modal__settings"></article>
+                <FeatureInline
+                    iconPath={slidersIcon}
+                    iconAltText="horizontally stacked adjustment sliders icon"
+                    featureText="Manage content preferences"
+                />
                 <hr className="modal__bar modal__bar--bottom" />
             </div>
         </ReactModal>
