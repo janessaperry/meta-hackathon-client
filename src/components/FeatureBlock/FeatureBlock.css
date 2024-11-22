@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****** VARIABLES ******/
+/****** MIXINS ******/
+.feature-block {
+  width: 50%;
+  background-color: #f2f5f7;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+}
+.feature-block__icon {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=FeatureBlock.css.map */

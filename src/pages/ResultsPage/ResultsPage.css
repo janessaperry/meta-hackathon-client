@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****** VARIABLES ******/
+/****** MIXINS ******/
+.header {
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.header__query-image {
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tabs__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+.tabs__item {
+  cursor: pointer;
+  color: #6e757f;
+  font-size: 12px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+.tabs__item.active {
+  color: #0d1015;
+  border-bottom: 2px solid #0d1015;
+}
+
+.posts {
+  line-height: 0;
+}
+.posts__list {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+.posts__image-item {
+  flex-basis: 33%;
+  line-height: 0;
+}
+.posts__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.profile__title {
+  padding: 0.75rem;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  align-items: center;
+}
+.profile__image {
+  max-width: 36px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
+}/*# sourceMappingURL=ResultsPage.css.map */

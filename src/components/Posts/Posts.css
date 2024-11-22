@@ -1,0 +1,91 @@
+.post {
+  margin-bottom: 1rem;
+}
+.post__header-container {
+  padding: 0.25rem 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.post__avatar-image-container {
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: linear-gradient(238.74deg, #c913b9 -2.57%, #f9373f 44.58%, #fecd00 91.55%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post__profile-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.post__avatar {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.post__dots {
+  background-color: transparent;
+  border: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.post__image {
+  width: 100%;
+  height: auto;
+}
+.post__actions-container {
+  padding: 0.25rem 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post__actions-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.post__action-item {
+  display: flex;
+  align-items: center;
+  gap: 0.1875rem;
+}
+.post__action-count {
+  font-size: 0.75rem;
+}
+.post__action-icon {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.post__action-icon:last-of-type {
+  margin-right: 0;
+}
+.post__description-container {
+  padding: 0.25rem 0.875rem;
+  font-size: 0.75rem;
+}
+.post__description-name {
+  font-weight: 600;
+  margin-right: 0.3125rem;
+}
+.post__description-muted {
+  color: #6e6e6e;
+}
+.post__view-all, .post__timestamp {
+  color: #6e6e6e;
+  margin-top: 0.5rem;
+}
+.post__timestamp {
+  font-size: 0.625rem;
+}/*# sourceMappingURL=Posts.css.map */

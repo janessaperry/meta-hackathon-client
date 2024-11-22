@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****** VARIABLES ******/
+/****** MIXINS ******/
+.feature-inline {
+  border-radius: 10px;
+  padding: 0.625rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.feature-inline__icon {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=Featureinline.css.map */
