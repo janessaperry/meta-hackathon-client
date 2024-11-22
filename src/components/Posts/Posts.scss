@@ -1,0 +1,113 @@
+.post {
+    margin-bottom: 1rem;
+  &__header-container {
+    padding: 0.25rem 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+  }
+  &__avatar-image-container {
+    position: relative;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: linear-gradient(
+      238.74deg,
+      #c913b9 -2.57%,
+      #f9373f 44.58%,
+      #fecd00 91.55%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+  &__profile-name {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  &__avatar {
+    display: block;
+    z-index: 10;
+    border-radius: 50%;
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  &__dots {
+    background-color: transparent;
+    border: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__actions-container {
+    padding: 0.25rem 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__actions-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  &__action-item {
+    display: flex;
+    align-items: center;
+    gap: 0.1875rem;
+  }
+  &__action-count {
+    font-size: 0.75rem;
+  }
+  &__action-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  &__description-container {
+    padding: 0.25rem 0.875rem;
+    font-size: 0.75rem;
+  }
+  &__description {
+    &-name {
+      font-weight: 600;
+      margin-right: 0.3125rem;
+    }
+    &-muted {
+      color: #6e6e6e;
+    }
+  }
+  &__view-all {
+    color: #6e6e6e;
+    margin-top: 0.5rem;
+  }
+  &__timestamp{
+    @extend .post__view-all;
+    font-size: .625rem;
+  }
+}
