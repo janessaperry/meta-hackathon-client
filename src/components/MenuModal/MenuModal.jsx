@@ -52,7 +52,7 @@ function MenuModal({ isOpen, handleCloseModal, postImage }) {
                 </div>
                 <button
                     className="modal__visual-search-btn"
-                    onClick={() => navigate("/result")}
+                    onClick={() => navigate("/visual-search/pasta")}
                 >
                     <img
                         className="modal__btn-image"
