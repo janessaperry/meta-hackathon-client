@@ -1,14 +1,26 @@
 @use "../../styles/partials/variables" as *;
 
-.header {
-	padding: $spacing-16 $spacing-8;
-	@include flex-row($spacing-16);
+.top-nav {
+	padding: $spacing-16 $spacing-16 $spacing-16 $spacing-8;
+	@include flex-row($spacing-8);
 	align-items: center;
+
+	&__back-icon {
+		cursor: pointer;
+	}
+
+	&__query-wrapper {
+		flex-grow: 1;
+		line-height: 0;
+		padding: 8px;
+		background-color: #eff0f2;
+		border-radius: 4px;
+	}
 
 	&__query-image {
 		border-radius: 4px;
-		width: 44px;
-		height: 44px;
+		width: 36px;
+		height: 36px;
 		aspect-ratio: 1/1;
 		object-fit: contain;
 	}
@@ -23,7 +35,7 @@
 	&__item {
 		cursor: pointer;
 		color: #6e757f;
-		font-size: 12px;
+		font-size: 14px;
 		padding: $spacing-8 $spacing-16;
 		font-weight: 500;
 
@@ -43,7 +55,7 @@
 	}
 
 	&__image-item {
-		flex-basis: 33%;
+		flex: 1 1 30%;
 		line-height: 0;
 	}
 
@@ -70,5 +82,18 @@
 		aspect-ratio: 1/1;
 		object-fit: cover;
 		border-radius: 100px;
+	}
+}
+
+.suggestions {
+	cursor: pointer;
+	padding: $spacing-8 $spacing-12;
+	@include flex-row($spacing-8);
+
+	&__chip {
+		font-size: 14px;
+		background-color: #eff0f2;
+		padding: $spacing-8;
+		border-radius: 4px;
 	}
 }
