@@ -13,11 +13,73 @@
     display: flex;
     flex-direction: column;
     border-radius: 1.25rem 1.25rem 0 0;
+
     &__content-wrapper {
         height: 100%;
     }
+
+    &__bar--top {
+        border: 0.125rem solid #bec2c7;
+        border-radius: 0.25rem;
+        width: 2.5rem;
+        justify-self: center;
+        margin-top: 0.5rem;
+        margin-bottom: $spacing-12;
+    }
+
     &__features-top {
-        padding: 0.5rem;
+        padding: $spacing-12;
         @include flex-row($gap: $spacing-8);
+    }
+
+    &__visual-search-btn {
+        cursor: pointer;
+        padding: $spacing-16;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(268deg, #dc2288 0%, #fdba09 100%);
+        z-index: 0;
+        position: relative;
+        width: 95%;
+        margin: 0 $spacing-10;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            bottom: 3px;
+            left: 3px;
+            background-color: #f3f5f7;
+            border-radius: 10px;
+            z-index: -1;
+            transition: background-color 0.2s;
+        }
+        &:hover::after {
+            background-color: #fff5e5;
+        }
+    }
+
+    &__features-list {
+        padding: $spacing-8 0;
+        border-radius: 10px;
+        @include flex-col($gap: $spacing-8); //reduce if needed
+        background-color: #f3f5f7;
+        margin: $spacing-10;
+
+        & + .feature-inline {
+            background-color: #f2f5f7;
+            margin: $spacing-10;
+        }
+    }
+
+    &__bar--bottom {
+        border: 0.125rem solid #0a1014;
+        border-radius: 0.25rem;
+        width: 7.5rem;
+        justify-self: center;
+        align-self: flex-end;
+        margin-top: 5rem;
+        margin-bottom: $spacing-12; //reduce as needed
     }
 }

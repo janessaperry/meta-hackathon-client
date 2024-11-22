@@ -7,7 +7,8 @@
     align-items: center;
     border-radius: 0.625rem;
     @include flex-col($gap: $spacing-4);
-    padding: 0.5rem;
+    padding: $spacing-10;
+
     &__icon {
         display: block;
         height: 1.5rem;

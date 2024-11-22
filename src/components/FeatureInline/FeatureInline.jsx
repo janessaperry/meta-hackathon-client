@@ -1,8 +1,10 @@
+import "./FeatureInline.scss";
+
 function FeatureInline({ iconPath, iconAltText, featureText }) {
     return (
         <div className="feature-inline">
             <img
-                className="feaure-inline__icon"
+                className="feature-inline__icon"
                 src={iconPath}
                 alt={iconAltText}
             />
