@@ -1,0 +1,38 @@
+@use "../../styles/partials/variables" as *;
+
+.feature-block {
+    width: 50%;
+    height: 10%;
+    background-color: #f2f5f7;
+    border: 0.0625rem cornflowerblue solid;
+    @include flex-col($gap: $spacing-8);
+    &__icon {
+        display: flex;
+        border: 0.0625rem cornflowerblue solid;
+        height: 100%;
+        width: 2.25rem;
+    }
+}
+
+// import { useState } from "react";
+// import "./App.scss";
+// import MenuModal from "./components/MenuModal/MenuModal";
+
+// const [isOpen, setIsOpen] = useState(false);
+
+// const handleMoreIconClick = () => {
+//     setIsOpen(true);
+// };
+
+// const handleCloseModal = () => {
+//     setIsOpen(false);
+// };
+
+//  ///goes into jsx
+// <span
+// className="material-icons"
+// onClick={() => handleMoreIconClick()}
+// >
+// more_vert
+// </span>
+// <MenuModal isOpen={isOpen} handleCloseModal={handleCloseModal} />
