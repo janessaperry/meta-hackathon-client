@@ -1,8 +1,8 @@
 @use "../../styles/partials/variables" as *;
 
 .feature-inline {
-    border-radius: 16px;
-    padding: $spacing-8 $spacing-16;
+    border-radius: 10px;
+    padding: $spacing-10 $spacing-16;
     @include flex-row($spacing-8);
     align-items: center;
 
@@ -11,9 +11,5 @@
         height: 1.5rem;
         width: 1.5rem;
         object-fit: contain;
-    }
-    &:last-child {
-        border-radius: 16px;
-        background-color: #f3f5f7;
     }
 }

@@ -16,6 +16,7 @@
 
     &__content-wrapper {
         height: 100%;
+        padding: 0 $spacing-16;
     }
 
     &__bar--top {
@@ -23,13 +24,13 @@
         border-radius: 0.25rem;
         width: 2.5rem;
         justify-self: center;
-        margin-top: 0.5rem;
-        margin-bottom: $spacing-12;
+        margin-top: $spacing-12;
+        margin-bottom: $spacing-16;
     }
 
     &__features-top {
-        padding: $spacing-12;
-        @include flex-row($gap: $spacing-8);
+        padding: $spacing-10 0;
+        @include flex-row($gap: $spacing-10);
     }
 
     &__visual-search-btn {
@@ -41,8 +42,8 @@
         background: linear-gradient(268deg, #dc2288 0%, #fdba09 100%);
         z-index: 0;
         position: relative;
-        width: 95%;
-        margin: 0 $spacing-10;
+        width: 100%;
+        // margin: 0 $spacing-16;
         &::after {
             content: "";
             position: absolute;
@@ -61,15 +62,15 @@
     }
 
     &__features-list {
-        padding: $spacing-8 0;
+        // padding: $spacing-8 0;
         border-radius: 10px;
         @include flex-col($gap: $spacing-8); //reduce if needed
         background-color: #f3f5f7;
-        margin: $spacing-10;
+        margin: $spacing-10 0;
 
         & + .feature-inline {
             background-color: #f2f5f7;
-            margin: $spacing-10;
+            margin: $spacing-10 0;
         }
     }
 
@@ -79,7 +80,7 @@
         width: 7.5rem;
         justify-self: center;
         align-self: flex-end;
-        margin-top: 5rem;
-        margin-bottom: $spacing-12; //reduce as needed
+        margin-top: $spacing-48;
+        margin-bottom: $spacing-12;
     }
 }
