@@ -1,12 +1,21 @@
 import "./Posts.scss";
 import avatar from "../../assets/images/post-images/avatar-clear.png";
-import post from "../../assets/images/post-images/post-1.png";
 import like from "../../assets/images/icons/like-active.png";
 import comment from "../../assets/images/icons/comment.png";
 import save from "../../assets/images/icons/save.svg";
 import share from "../../assets/images/icons/share.png";
+import MenuModal from "../MenuModal/MenuModal";
+import { useState } from "react";
 
-export default function Posts() {
+export default function Posts({ postImage }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleMoreIconClick = () => {
+    setIsOpen(true);
+  };
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="post">
       {/* Post header */}
@@ -17,12 +26,12 @@ export default function Posts() {
           </div>
           <p className="post__profile-name">ruffles</p>
         </div>
-        <button className="post__dots">
+        <button className="post__dots" onClick={() => handleMoreIconClick()}>
           <span className="material-icons">more_horiz</span>
         </button>
       </div>
       {/* post image */}
-      <img src={post} alt="post image" className="post__image" />
+      <img src={postImage} alt="post image" className="post__image" />
       {/* Post actions */}
       <div className="post__actions-container">
         <ul className="post__actions-list">
@@ -48,13 +57,14 @@ export default function Posts() {
       {/* Post description */}
       <div className="post__description-container">
         <p className="post__description">
-          <span className="post__description-name">ruffles</span>Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit, sed do eiusmod tempor... <span className="post__description-muted">more</span>
+          <span className="post__description-name">ruffles</span>Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...{" "}
+          <span className="post__description-muted">more</span>
         </p>
-              <p className="post__view-all">View all comments</p>
+        <p className="post__view-all">View all comments</p>
         <p className="post__timestamp">3 days ago</p>
-              
       </div>
+      <MenuModal isOpen={isOpen} handleCloseModal={handleCloseModal} />
     </div>
   );
 }
